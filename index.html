@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+     <div class="page_body">
+        <div class="Wel_tag">
+            <div class="tag">
+              <div class="Wel_text1">
+                 Welcome 
+              </div>
+              <div class="Wel_text1 text_mirror">
+                 Welcome 
+              </div>
+            </div>
+            
+            <div id="start_anima_calc">So lets start</div>
+        </div>
+        
+    
+    
+        <div id="Cal_body">
+            <div class="cal_cont">
+                <div class="exp_display">
+
+                    <div id="input_exp" class="operator">
+                       
+                    </div>
+                    <div id="out_in_box">
+                          
+                    </div>
+                </div>
+                <div class="button_sec">
+                    <div class="input_buttons"><button id="all_clr">AC</button>
+                        <button id="del">DEL</button>
+                        <button  id="percentage_button">%</button>
+                        <button  id="div_button">/</button>
+                    </div>
+                    <div class="input_buttons"><button class="num_buttons" onclick="change_digit(7)">7</button>
+                        <button class="num_buttons"onclick="change_digit(8)">8</button>
+                        <button class="num_buttons" onclick="change_digit(9)">9</button>
+                        <button  id="add_button">+</button>
+                    </div>
+                    <div class="input_buttons">
+                        <button class="num_buttons" onclick="change_digit(4)">4</button>
+                        <button class="num_buttons" onclick="change_digit(5)">5</button>
+                        <button class="num_buttons" onclick="change_digit(6)">6</button>
+                        <button  id="sub_button">-</button>
+                    </div>
+                    <div class="input_buttons"><button class="num_buttons" onclick="change_digit(1)">1</button>
+                        <button  class="num_buttons" onclick="change_digit(2)">2</button>
+                        <button class="num_buttons" onclick="change_digit(3)">3</button>
+                        <button id="mul_button" >x</button>
+                    </div>
+                    <div class="input_buttons">
+                        <button id="paren">( )</butt>
+                        <button id="zero_but" class="num_buttons" onclick="change_digit(0)">0</button>
+                        <button  id="dec" >.</button>
+                        <button id="equal_button">=</button>
+                        
+                    </div>
+                </div>
+
+            </div>
+     </div>
+        
+    <script src="basic1.js"></script>
+</body> 
+
+</html>

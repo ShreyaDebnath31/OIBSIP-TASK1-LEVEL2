@@ -1,0 +1,301 @@
+@font-face {
+    font-family: Concert_One;
+    src: url(./Concert_One/ConcertOne-Regular.ttf);
+}
+
+
+@font-face {
+    font-family: Nunito;
+    src: url(./Nunito/Nunito-VariableFont_wght.ttf);
+}
+
+body{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(41 4 53);
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.page_body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Wel_tag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 181px;
+    margin-bottom: 3%;
+    position: relative;
+
+    
+}
+
+.tag{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.Wel_text1{
+    font-family: Concert_One;
+    letter-spacing: 4px;
+    color: rgb(211, 142, 234);
+    position: relative;
+    text-align: center;
+    font-size: 78px;
+    transform: translateY(-25%);
+}
+
+.text_mirror{
+    position: absolute;
+    top: 7%;
+    left: 8%;
+    filter: blur(3px);
+    transform: translateY(26%) scale(-1) rotate(180deg) rotateX(129deg) skew(324deg);
+}
+
+#start_anima_calc{
+    width: 385%;
+    transform: translateY(67%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Nunito;
+    color: rgb(55, 177, 210);
+    width: 100%;
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#start_anima_calc::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(41 4 53);
+    border-left: 2px solid rgb(255, 255, 255);
+    animation: typing 3s steps(13) infinite;
+}
+
+
+@keyframes typing {
+    40%,60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }
+}
+
+#Cal_body{
+   position: relative;
+   transform: translateY(0%);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 29px 16px 16px 16px;
+   align-items: center;
+   border-radius: 3%;
+   box-sizing: border-box;
+   overflow: hidden;
+}
+
+#Cal_body:before{
+    content: '';
+    position: absolute;
+    border-radius: 3%;
+    width: 218px;
+    height: 200%;
+    background: linear-gradient( #14e9f0,#e100ff);
+    animation: calculator 6s linear infinite;
+}
+
+
+#Cal_body::after{
+    content:'';
+    position: absolute;
+    background: rgb(4, 4, 28);
+    inset: 5px;
+    border-radius: 3%;
+    
+     
+}
+
+@keyframes calculator{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.cal_cont{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.exp_display{
+   display: flex;
+   flex-direction: column;
+   height: 51px;
+   width: 100%;
+   left: 0;
+   border-radius: 10px;
+   color: #fff;
+   position: relative;
+   top: 2%;
+}
+
+#input_exp{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 3%;
+    font-size: 1.3em;
+    width: 19vw;
+    position: relative;
+    right: 4%;
+    top: 20%;
+}
+
+#out_in_box{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 3%;
+    padding-top: 3.5%;
+    font-size: 2.5em;
+    overflow: hidden;
+    width: 19vw;
+    flex: 0 0 86.5%;
+    position: relative;
+    right: 3%;
+}
+
+
+.button_sec{
+    display: grid;
+    width: 19vw;
+    margin-top: 13%;
+    padding: 31px 10px 10px 10px;
+    overflow-y: auto;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 16px;
+    border-top: 1px solid white;
+}
+
+.input_buttons{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 35px;
+    column-gap: 9%;
+    right: 0%;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+button{
+    width: 45px;
+    border-style: none;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    grid-gap: 6px;
+    
+    padding: 7px;
+    text-align: center;
+    font-size: 1em;
+    background-color: rgb(202 241 243);
+}
+
+button:hover{
+    background-color: #03e9f4;
+    box-shadow: 0 0 15px #03e9f4,
+                 0 0 15px #03e9f4,
+                 0 0 15px #03e9f4,
+                 0 0 15px #03e9f4;
+    
+}
+
+@media  (max-width:1175px){
+    .Wel_tag{
+        width: 100%;
+        transform: translate(18%,-64%);
+    }
+    .page_body{
+        flex-direction: column;
+    }
+    #Cal_body{
+        width: 30vw;
+        
+    }
+
+    .cal_cont{
+        width: 100%;
+    }
+
+    .exp_display , .button_sec{
+        width: 100%;
+    }
+}
+
+@media  (max-width:900px){
+    .Wel_tag{
+        width: 100%;
+        transform: translate(18%,-64%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page_body{
+        flex-direction: column;
+    }
+    #Cal_body{
+        width: 30vw;
+        padding: 29px 16px 16px 16px;
+    }
+
+    .cal_cont{
+        width: auto;
+        padding:31px 10px 10px 10px;;
+    }
+
+    .exp_display{
+        width: 100%;
+    }
+    
+    button{
+        width: 75%;
+        font-size: 0.7em;
+        font-weight: 400;
+    }
+    .input_buttons{
+        width: 100%;
+        column-gap : 1%;
+    }
+    .button_sec{
+        width: 100%;
+        padding: 5%;
+    }
+}
+
